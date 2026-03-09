@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+
+<title>Federica - La ragazza dei sogni</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&amp;display=swap" rel="stylesheet" />
+
+<style type="text/css">
+
+body{
+margin:0;
+background:#fff0f6;
+font-family:'Luckiest Guy', cursive;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background-image:url("federica.jpeg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:110px;
+color:white;
+letter-spacing:4px;
+
+text-shadow:
+4px 4px 10px rgba(0,0,0,0.5);
+}
+
+/* SEZIONI */
+
+.section{
+
+max-width:720px;
+margin:140px auto;
+padding:50px;
+
+background:white;
+
+border-radius:28px;
+border:2px solid #ffd1e6;
+
+box-shadow:
+0px 10px 20px rgba(0,0,0,0.15);
+
+text-align:center;
+
+/* animazione */
+
+opacity:0;
+transform:translateY(80px) scale(0.96);
+transition:all 0.9s ease;
+
+}
+
+.section.visible{
+opacity:1;
+transform:translateY(0px) scale(1);
+}
+
+/* TITOLI ROSA */
+
+.section h2{
+
+font-size:46px;
+margin-bottom:20px;
+
+color:#ff4fa3;
+
+text-shadow:
+2px 2px 6px rgba(0,0,0,0.15);
+
+}
+
+/* TESTO */
+
+.section p{
+font-size:21px;
+line-height:1.6;
+font-family:Arial, Helvetica, sans-serif;
+color:#444;
+}
+
+/* hover 3D leggero */
+
+.section:hover{
+
+transform:translateY(-6px) scale(1.02);
+
+box-shadow:
+0px 18px 30px rgba(0,0,0,0.2);
+
+}
+
+</style>
+
+<script type="text/javascript">
+
+window.addEventListener("scroll",function(){
+
+var sections=document.querySelectorAll(".section");
+
+for(var i=0;i<sections.length;i++){
+
+var pos=sections[i].getBoundingClientRect().top;
+var screen=window.innerHeight;
+
+if(pos<screen-120){
+sections[i].classList.add("visible");
+}
+
+}
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<div class="hero">
+<h1>Federica: la ragazza dei sogni</h1>
+</div>
+
+<div class="section">
+<h2>Chi è Federica</h2>
+<p>
+Una combinazione rara di simpatia, fascino e intelligenza.
+Una persone che rende ogni momento speciale e che 
+possiede la capacità di stravolgere anche la peggiore tra le giornate.
+</p>
+</div>
+
+<div class="section">
+<h2>I suoi superpoteri</h2>
+<p>
+Occhioni da bambola per ammaliarti,
+sorrisoni contagiosi e capacità indiscutibile
+di battere chiunque a qualsiasi gioco da tavolo.
+</p>
+</div>
+
+<div class="section">
+<h2>Momenti memorabili</h2>
+<p>
+Ogni singolo momento. Dal caffè trasparente ai calzoni smollati passando attraverso i soldi rubati al supermercato.
+</p>
+</div>
+
+<div class="section">
+<h2>Perché questo sito esiste</h2>
+<p>
+Per ricordare che l'amore esiste, 
+che sono la persona più fortunata
+del mondo a poterle stare accanto
+e che il mondo avrebbe bisogno
+di più Federiche.
+</p>
+</div>
+
+</body>
+</html>
